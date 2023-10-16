@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Theodor Hägg (.NET23)
- * Website: https://www.github.com/etheoo98/Labb5-GenericCollectionsOOP
+ * Website: https://www.github.com/etheoo98/Labb8-GenericCollectionsOOP
  * Date: October 16, 2023
  */
 
