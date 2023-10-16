@@ -1,4 +1,10 @@
-﻿using GenericCollectionsOOP.Interfaces;
+﻿/*
+ * Author: Theodor Hägg (.NET23)
+ * Website: https://www.github.com/etheoo98/Labb5-GenericCollectionsOOP
+ * Date: October 16, 2023
+ */
+
+using GenericCollectionsOOP.Interfaces;
 using GenericCollectionsOOP.Models;
 
 namespace GenericCollectionsOOP;
