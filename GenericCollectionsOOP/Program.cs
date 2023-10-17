@@ -31,7 +31,8 @@ internal static class Program
         PrintStackElements();
         PopStackElements();
         PushToStack();
-        PeekStack(employee3);
+        PeekStack();
+        StackContains(employee3);
         ListNameContains('i');
         FindFirstGenderInList(Gender.Male);
         FindAllGenderInList(Gender.Male);
@@ -71,7 +72,7 @@ internal static class Program
         PrintHeader("All employees are back in the stack through Push()", false);
     }
 
-    private static void PeekStack(Employee employee3)
+    private static void PeekStack()
     {
         PrintHeader("Now retrieving from stack using Peek()", true);
         
@@ -81,10 +82,13 @@ internal static class Program
             Console.WriteLine(employee.ToString());
             Console.WriteLine($"There are now {EmployeeStack.Count} employees left in the stack.");
         }
-        
-        Console.WriteLine(EmployeeStack.Contains(employee3)
-            ? "Yes, the stack contains employee3."
-            : "No, the stack does not contain employee3.");
+    }
+
+    private static void StackContains(Employee employee3)
+    {
+        PrintHeader(EmployeeStack.Contains(employee3)
+                ? "Yes, the stack contains employee3."
+                : "No, the stack does not contain employee3.", false);
     }
 
     private static void ListNameContains(Char symbol)
