@@ -16,16 +16,22 @@ internal static class Program
     
     public static void Main()
     {
-        EmployeeStack.Push(new Employee("Andre", Gender.Male));
-        EmployeeStack.Push(new Employee("Ebba", Gender.Female));
-        EmployeeStack.Push(new Employee("Karin", Gender.Female));
-        EmployeeStack.Push(new Employee("Heikki", Gender.Male));
-        EmployeeStack.Push(new Employee("Marie", Gender.Female));
+        var employee1 = new Employee("Andre", Gender.Male);
+        var employee2 = new Employee("Ebba", Gender.Female);
+        var employee3 = new Employee("Karin", Gender.Female);
+        var employee4 = new Employee("Heikki", Gender.Male);
+        var employee5 = new Employee("Marie", Gender.Female);
+        
+        EmployeeStack.Push(employee1);
+        EmployeeStack.Push(employee2);
+        EmployeeStack.Push(employee3);
+        EmployeeStack.Push(employee4);
+        EmployeeStack.Push(employee5);
         
         PrintStackElements();
         PopStackElements();
         PushToStack();
-        PeekStack();
+        PeekStack(employee3);
         ListNameContains('i');
         FindFirstGenderInList(Gender.Male);
         FindAllGenderInList(Gender.Male);
@@ -65,7 +71,7 @@ internal static class Program
         PrintHeader("All employees are back in the stack through Push()", false);
     }
 
-    private static void PeekStack()
+    private static void PeekStack(Employee employee3)
     {
         PrintHeader("Now retrieving from stack using Peek()", true);
         
@@ -76,9 +82,9 @@ internal static class Program
             Console.WriteLine($"There are now {EmployeeStack.Count} employees left in the stack.");
         }
         
-        Console.WriteLine(EmployeeStack.Count >= 3
-            ? "Yes, the stack contains employee 3."
-            : "No, the stack does not contain employee 3.");
+        Console.WriteLine(EmployeeStack.Contains(employee3)
+            ? "Yes, the stack contains employee3."
+            : "No, the stack does not contain employee3.");
     }
 
     private static void ListNameContains(Char symbol)
